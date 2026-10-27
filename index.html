@@ -501,11 +501,11 @@ body.m #notes{max-height:40vh;bottom:76px}
         <!-- mode 0: build-up -->
         <div class="mode on">
           <div class="stack" id="stack">
-            <div class="layer" style="bottom:0;height:70px;background:repeating-linear-gradient(45deg,#5d6672 0 10px,#545c67 10px 20px);color:#e7ecf2">Concrete terrace<small>· ground / shot-blasted, cracks repaired</small></div>
-            <div class="layer" style="bottom:70px;height:30px;background:#c4a35a;color:#231a05">Epoxy primer + quartz broadcast<small>· sandy key for the membrane</small></div>
-            <div class="layer" style="bottom:100px;height:50px;background:#3f7bd1;color:#fff">Pure polyurea ≥ 2.0 mm<small>· hot-sprayed, A:B = 1:1</small></div>
-            <div class="layer" style="bottom:150px;height:26px;background:#7cc3ff;color:#071c33">Textured polyurea<small>· anti-skid for spectators</small></div>
-            <div class="layer" style="bottom:176px;height:26px;background:#e8eef6;color:#14243a">Aliphatic PU topcoat<small>· stops UV yellowing</small></div>
+            <div class="layer" style="bottom:0;height:70px;background:repeating-linear-gradient(45deg,#5d6672 0 10px,#545c67 10px 20px);color:#e7ecf2">Concrete terrace<small>· cleaned and roughened</small></div>
+            <div class="layer" style="bottom:70px;height:30px;background:#c4a35a;color:#231a05">Primer + sand<small>· for grip</small></div>
+            <div class="layer" style="bottom:100px;height:50px;background:#3f7bd1;color:#fff">Waterproof layer<small>· about 2 mm, sprayed on</small></div>
+            <div class="layer" style="bottom:150px;height:26px;background:#7cc3ff;color:#071c33">Anti-slip layer<small>· safe for spectators</small></div>
+            <div class="layer" style="bottom:176px;height:26px;background:#e8eef6;color:#14243a">Sun-protection topcoat<small>· keeps its colour</small></div>
           </div>
           <button class="chip addl" id="addlayer">＋ Next layer</button>
         </div>
@@ -543,20 +543,20 @@ body.m #notes{max-height:40vh;bottom:76px}
     <div class="side">
       <div><h2>A seamless <em>spray-on</em> membrane</h2></div>
       <div class="specs">
-        <div><b>≥2.0</b><span>mm polyurea<br>dry film</span></div>
-        <div><b>&gt;340%</b><span>elongation<br>before break</span></div>
-        <div><b>&gt;15</b><span>mm crack<br>bridging</span></div>
-        <div><b>~1 h</b><span>to walk on<br>after spray</span></div>
+        <div><b>2 mm</b><span>about two credit<br>cards thick</span></div>
+        <div><b>3×</b><span>stretches 3× its<br>length</span></div>
+        <div><b>15 mm</b><span>covers a crack as<br>wide as a finger</span></div>
+        <div><b>1 hour</b><span>until people can<br>walk on it</span></div>
       </div>
       <div class="chips" id="qa">
-        <button class="chip">Weather window</button><button class="chip">Primer &amp; key</button><button class="chip">DFT thickness</button>
-        <button class="chip">Pull-off test</button><button class="chip">Terminations</button>
+        <button class="chip">Right weather</button><button class="chip">Good grip</button><button class="chip">Thick enough</button>
+        <button class="chip">Stuck on properly</button><button class="chip">Room to move</button>
       </div>
       <div class="card info" data-set="s6"></div>
       <div class="quiz" id="q6">
         <div class="q">Polyurea gels in seconds. Good news or bad news?</div>
         <div class="opts"><button class="chip opt" data-ok="0">Good: faster is better</button><button class="chip opt" data-ok="0">Bad: too fast to work</button><button class="chip opt" data-ok="1">Both</button></div>
-        <div class="ans"><b>Both.</b> Walkable in about an hour and rain-proof almost at once, but it won't self-level or "wet in". Any fault in <b>prep, primer or the A:B mix</b> is locked in instantly, so the QA happens <i>before</i> spraying.</div>
+        <div class="ans"><b>Both.</b> People can walk on it within an hour and rain can't wash it off, but there's <b>no time to fix mistakes</b>. So all the checks happen <i>before</i> spraying.</div>
       </div>
     </div>
   </div>
@@ -612,11 +612,11 @@ const INFO={
      ["4 · Design &amp; shop drawings","Upgrade details (new members, plates, supports) are designed, then the fabricator's shop drawings are checked against the design intent."],
      ["5 · Hold-point inspection","Work stops until the engineer inspects. E.g. no new supports are closed in or painted before the fit-up and welds are seen."],
      ["6 · Protect &amp; record","Blast, prime and coat to a corrosion-protection spec in a tropical climate, then record what was done where: the baseline for every future inspection."]],
- s6:[["Weather window","Spray only at <span class='k'>20–40 °C ambient, RH &lt; 85%</span>, substrate below 60 °C, and with the concrete dry. Every spray day is logged: weather, batch numbers, readings."],
-     ["Primer &amp; key","Epoxy primer seals the concrete pores. While still tacky it is broadcast with <span class='k'>quartz sand</span> to give the polyurea a rough mechanical key. The primer itself should bond better than the concrete (&gt;2 MPa, concrete fails first)."],
-     ["DFT thickness","The membrane is only as good as its thinnest spot. <span class='k'>Dry film thickness ≥ 2.0 mm</span> polyurea is checked on a grid, more at edges, steps and joints where a spray gun tends to run thin."],
-     ["Pull-off adhesion test","A metal dolly is glued on and pulled off (ASTM D7234). Target <span class='k'>&gt; 1.5 MPa</span>. The <i>failure mode</i> matters too: concrete tearing out is good; coating peeling cleanly off the primer is not."],
-     ["Terminations","Where the coating stops, it is tucked into a cut <span class='k'>termination groove</span>. An exposed leading edge gets undermined by water, feet and cleaning, and the peel starts there."]]
+ s6:[["Right weather","Spraying only happens on <span class='k'>dry days</span> that aren't too hot or too humid, and every spray day is written down in a log."],
+     ["Good grip","A primer goes on first and is sprinkled with sand while it's still sticky, giving the coating a <span class='k'>rough surface to hold on to</span>."],
+     ["Thick enough","A small gauge measures the coating's thickness all over the terrace, with <span class='k'>extra checks at edges and steps</span>, where it tends to be thinnest."],
+     ["Stuck on properly","A small metal disc is glued on and <span class='k'>pulled off with a tester</span>. If the coating is well bonded, the concrete breaks before the coating lets go."],
+     ["Room to move","Concrete expands and shrinks with the heat, so the joints get a <span class='k'>flexible filler</span> and the coating dips into them instead of cracking."]]
 };
 const NOTES=[
  ["~3 min","Welcome. Introduce JPK as lead C&amp;S consultant on the upgrade.","Read the safety box out loud.","Click hotspots 1→4: the 'tour' of the systems (fabric, truss, gutter, terrace, plus foundations below).","Hook: 320 connections, each inspected individually. Ask them how long they think that takes."],
