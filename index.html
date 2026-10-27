@@ -49,6 +49,7 @@ h2 em,h1 em{font-style:normal;color:var(--accent)}
 .card p+p{margin-top:8px}
 .card .k{color:var(--accent);font-weight:600}
 .info{min-height:150px}
+#s3 .info{min-height:0}
 .info.flash{animation:flash .5s ease}
 @keyframes flash{from{border-color:var(--accent)}to{border-color:var(--line)}}
 .hint{font-size:14px;color:var(--mute);display:flex;align-items:center;gap:8px}
@@ -188,6 +189,10 @@ h2 em,h1 em{font-style:normal;color:var(--accent)}
 .specs div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 .specs b{display:block;font:700 36px/1 var(--head);color:var(--accent)}
 .specs span{font-size:13px;color:var(--mute);line-height:1.3}
+.mat{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.mathead b{display:block;font:600 21px var(--head);color:var(--accent)}.mathead span{font-size:14.5px;color:#c9d6e6;line-height:1.4}
+.mat .specs div{background:var(--panel2);padding:10px 12px}.mat .specs b{font-size:28px}
+.matfoot{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13.5px;color:var(--mute)}
 .gl{transition:opacity .3s}.gl.dim{opacity:.18}
 #s1 .hots{position:absolute;inset:0;z-index:3;pointer-events:none}#s1 .hots .hot{pointer-events:auto}
 
@@ -397,13 +402,23 @@ body.m #notes{max-height:40vh;bottom:76px}
       <button class="hot" style="left:82%;top:83%" data-i="3">4</button>
     </div>
     <div class="side">
-      <div><h2>Fabric that works <em>only in tension</em></h2>
-      <p class="lede" style="margin-top:10px">No bending stiffness, no compression. Its stiffness comes from <strong>shape + prestress</strong>, not thickness.</p></div>
+      <div><h2><em>Tension-only</em> fabric</h2>
+      <p class="lede" style="margin-top:8px;font-size:18px">No bending stiffness, no compression. Its stiffness comes from <strong>shape + prestress</strong>, not thickness.</p></div>
+      <div class="mat">
+        <div class="mathead"><b>The membrane material</b><span>Glass-fibre fabric coated with PTFE (the "non-stick" coating), joined by heat-welded seams: no stitching</span></div>
+        <div class="specs">
+          <div><b>0.65 mm</b><span>thin: about 6<br>sheets of paper</span></div>
+          <div><b>1.15 kg</b><span>per m²: a 1-litre<br>bottle of water</span></div>
+          <div><b>650 kg</b><span>held by a strip<br>just 5 cm wide</span></div>
+          <div><b>80%</b><span>of sun heat<br>reflected away</span></div>
+        </div>
+        <div class="matfoot"><span>☀ Lets in ~12% soft daylight</span><span>🔥 Fire-safe: Class 0</span><span>🌧 Self-cleaning in the rain</span></div>
+      </div>
       <div class="card info" data-set="s3"></div>
       <div class="quiz" id="q3">
         <div class="q">Why can't a membrane roof panel be flat?</div>
         <div class="opts"><button class="chip opt" data-ok="0">It looks better curved</button><button class="chip opt" data-ok="1">Flat fabric can't resist load without huge sag</button></div>
-        <div class="ans">A flat taut sheet resists load only by deflecting. With opposite curvatures, one set of fibres resists <i>downward</i> load (snow, ponding, maintenance) and the other resists <i>uplift</i>. The shape isn't drawn. It is <b>found</b> by computer form-finding (force-density / dynamic relaxation), then cut into patterns smaller than the final size, so the fabric is stretched to its prestress on installation.</div>
+        <div class="ans">A flat sheet resists load only by sagging. Opposite curvatures let one fibre direction take <i>downward</i> load and the other <i>uplift</i>. The shape is <b>found</b> by computer, not drawn.</div>
       </div>
       <p class="hint">Click the numbered points</p>
     </div>
@@ -621,7 +636,7 @@ const INFO={
 const NOTES=[
  ["~3 min","Welcome. Introduce JPK as lead C&amp;S consultant on the upgrade.","Read the safety box out loud.","Click hotspots 1→4: the 'tour' of the systems (fabric, truss, gutter, terrace, plus foundations below).","Hook: 320 connections, each inspected individually. Ask them how long they think that takes."],
  ["~4 min","Toggle Gravity → Wind uplift. Ask the quiz BEFORE revealing.","Final-year link: stress reversal, load combinations (1.35G+1.5Q vs 1.0G+1.5W uplift).","Hotspot 4 leads into: why connections get the most attention in any steel structure."],
- ["~3 min","Anticlastic form. Ask: why can't it be flat?","Mention form-finding and compensated patterning: the panel is cut smaller than its final size.","Hotspot 4: good practice when working near fabric."],
+ ["~3 min","Anticlastic form. Ask: why can't it be flat?","Mention form-finding and compensated patterning: the panel is cut smaller than its final size.","Material panel: PTFE-coated glass fibre, 0.65 mm thin, 1.15 kg/m², a 5 cm strip holds ~650 kg (6,500 N/5 cm), reflects ~80% of solar heat, lets ~12% daylight through, fire Class 0.","Hotspot 4: good practice when working near fabric."],
  ["~3 min","Click the three steel layers to highlight them.","Point: load path from gutter → new supports → truss.","Ask the quiz: design for maintenance and the tropical climate."],
  ["~4 min","Walk the 6 steps.","Quiz: why survey when drawings exist?","Point: upgrade design = verify existing + design new + inspect at hold points."],
  ["~4 min","Click through photos 1→5: primer → polyurea → risers → PU coat → seating.","Build-up: add layers one by one. Then Joint detail: why the membrane dips into the joint.","QA chips: weather window, primer key, DFT, pull-off (failure mode), terminations. Ask the quiz.","Finish on Spot it on site: they tick items off during the walk. Q&amp;A."]
